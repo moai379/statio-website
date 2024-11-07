@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=GT+Pressura&display=swap');
+
+*{
+    font-family: 'GT Pressura', sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+    #dark-mode {
+        filter: invert(1);
+        background-color: black;
+    }
+}
+
+header {
+    border: 0 0 1px 0 solid black;
+}
+
+hr {
+    max-width: 1400px;
+}
+
+
+/* HEADER */
+
+.header-content {
+	display: flex;
+    max-width: 1400px;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 10px 20px;
+}
+
+.main-heading {
+    display: inline-flex;
+    cursor: pointer;
+}
+.main-heading img{
+    filter: invert(1);
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+}
+.main-heading p{
+    font-size: 24px;
+    padding-top: 7px;
+    margin-left: -8%;
+}
+
+
+.categories{
+    cursor: pointer;
+    font-size: 25px;
+    padding: 0 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 8px;
+}
+
+.categories:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: rgb(221, 145, 5); 
+    transition: all 0.2s ease;
+}
+
+#categoryContainer {
+    display: none; 
+}
+
+.categories-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1350px;
+    padding: 10px 20px;
+    margin-left: 40px;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+}
+
+.category-item img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.category-item p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+.search-content{
+    background-color: white;
+    display: inline-flex;
+    justify-content: space-between;
+    border: 2px solid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.search-content input{
+    width: 400px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.search-content img{
+    width: 40px;
+    height: 40px;
+    background-color: orange;
+    transition: all 0.2s ease;
+}
+
+.search-content img:hover{
+    cursor: pointer;
+    background-color: darkorange;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+
+
+.navigation-content{
+    display: inline-flex;
+    gap: 30px;
+}
+
+.navigation-content img{
+    height: 40px;
+    width: 40px;
+}
+
+.nav-cont{
+    position: relative;
+}
+.nav-cont img{
+    cursor: pointer;
+    overflow: visible;
+    padding: 10px;
+    border-radius: 30%;
+    transition: all 0.5s ease;
+}
+.nav-cont p{
+    position: absolute;
+    display: none;
+    margin-left: -5px;
+    margin-top: 0;
+    padding: 10px;
+    color: white;
+}
+.register{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    gap: 10px;
+    scale: 1.3;
+    width: 60px;
+    margin-left: 11%;
+    margin-top: 5%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: darkcyan;
+    z-index: 2;
+}
+
+.register-btn{
+    border-radius: 5px;
+    scale: 1.1;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.register-btn:hover{
+    background-color: greenyellow;
+    transition: all 0.2s ease;
+}
+
+.nav-cont:hover img{
+    background-color: aqua;
+    border-radius: 50%;
+    fill-opacity: 50%;
+    transition: all 0.2s ease;
+}
+.nav-cont img:hover + p{
+    display: block;
+    background-color: darkcyan;
+    transition: all 0.2s ease;
+}
+
+
+/* SLIDER */
+
+.slider {
+    position: relative;
+    max-width: 1300px;
+    margin: 40px auto;
+}
+
+.slider-img {
+    width: 100%; 
+    opacity: 0; 
+    transition: opacity 1s ease; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+.slider-img.active {
+    opacity: 1; 
+    position: relative; 
+}
+
+
+.slider .w3-button {
+    display: none;
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    font-size: 30px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 0 13px;
+    cursor: pointer;
+    z-index: 1; 
+}
+
+.slider:hover .w3-button {
+    display: block; 
+}
+
+.slider .w3-button.w3-display-left {
+    left: 20px; 
+}
+
+.slider .w3-button.w3-display-right {
+    right: 20px;
+}
+
+.slider .w3-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.progression {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.progress-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: red;
+    border: 1px solid black;
+    box-shadow: 0 0 10px red;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.progress-dot.active {
+    background-color: green;
+    box-shadow: 0 0 10px green;
+}
+
