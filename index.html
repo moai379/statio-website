@@ -17,7 +17,7 @@
     <body>
         <header>
             <div class="header-content">
-                <div class="main-heading">
+                <div class="main-heading" onclick="window.location = '/'">
                     <img src="./resources/app-logo.png" alt="">
                     <p><b>tatio</b></p>
                 </div>                
@@ -45,8 +45,8 @@
                         <img src="./resources/user-icon.png" alt="Account" title="Account">
                     </div>
                     <div id="registerContainer" class="register">
-                        <button id="register-btn login" class="register-btn" onclick="openLogin()">Login</button>
-                        <button id="register-btn signup" class="register-btn" onclick="openSignup()">Sign Up</button>
+                        <button id="register-btn login" class="register-btn" onclick="openPage('signin')">Login</button>
+                        <button id="register-btn signup" class="register-btn" onclick="openPage('signup')">Sign Up</button>
                     </div>
                 </nav>
             </div>

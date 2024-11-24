@@ -83,14 +83,6 @@ function closeOnClickOutside(event) {
   }
 }
 
-function colorEmail(){
-  const email = document.getElementById('email');
-  const isShadow = email.style.filter === 'drop-shadow(0 0 5px green)';
-
-  email.style.filter = isShadow ? 'drop-shadow(0 0 0px)' : 'drop-shadow(0 0 5px green)';
-
-  if(!isShadow){
-    document.addEventListener('click', closeOnClick);
-  }
+function openPage(page) {
+  window.location.href = `../${page}.html`;
 }
-
