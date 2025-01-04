@@ -84,5 +84,5 @@ function closeOnClickOutside(event) {
 }
 
 function openPage(page) {
-  window.location.href = `../${page}.html`;
+  window.location.href = `/pages/${page}.html`;
 }
