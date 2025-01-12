@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keyword" content="ecommerce, toys, fiction, online, signin">
+        <link rel="icon" type="image/svg+xml" id="dark-mode" href="app-logo.svg">
+        <link rel="icon" type="image/png" href="app-logo.png">
+        <title>Statio - Sign in</title>
+        <link rel="stylesheet" media="all" href="stylesheets/signin.css">
+        <link rel="stylesheet" media="all" href="stylesheets/index.css">
+        <link rel="stylesheet" media="all" href="stylesheets/mobi-styles.css">
+        <link rel="js" media="all" href="js/register.js">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="header-content">
+                <div id="header-logo" class="header-logo" onclick="window.location = 'index.html'">
+                    <img src="app-logo.png" alt="">
+                    <p><b>tatio</b></p>
+                </div>    
+            </div>
+        </header>
+
+        <main>
+
+            <div class="signin-container">
+                <h1>Sign in</h1>
+                <form id="signin-form" action="/user/signin" method="post">
+                    <label for="email"><b>Email:</b></label>
+                    <input id ="email" name="email" type="email" placeholder="Enter your Email ID" onclick="colorInput('email')">
+                    
+                    <label for="password"><b>Password:</b></label>
+                    <input id ="password" name="password" type="password" placeholder="Enter your Password" onclick="colorInput('password')">
+                    
+                    <button type="submit">Sign in</button>
+                </form>
+
+                <p>By continuing, you agree to Statio's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+            </div>
+
+            <div class="signin-footer">
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            </div>
+            
+        </main>
+
+        <footer>
+            <hr>
+            <div class="footer-content">
+                <div class="terms-privacy">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <p>© 2023 Statio. All rights reserved.</p>   
+            </div>
+        </footer>
+
+        <script src="js/register.js"></script>
+        
+    </body>
+
+</html>

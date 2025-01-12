@@ -84,5 +84,8 @@ function closeOnClickOutside(event) {
 }
 
 function openPage(page) {
-  window.location.href = `/pages/${page}.html`;
+  window.location.href = `${page}`;
 }
+
+const usernameElement = document.getElementById('username');
+usernameElement.textContent = '<%= username %>';

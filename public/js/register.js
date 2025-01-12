@@ -16,8 +16,8 @@ function colorInput(inputId) {
     document.addEventListener('mousedown', onClickOutside);
 }
 
-  // Attach event listeners to email and password inputs
-['email', 'password'].forEach((inputId) => {
+  // Attach event listeners to inputs
+['email', 'password', 'name', 'username'].forEach((inputId) => {
     const input = document.getElementById(inputId);
 
     // Add focus event for better accessibility
@@ -25,4 +25,5 @@ function colorInput(inputId) {
 
     // Add click event for direct activation
     input.addEventListener('click', () => colorInput(inputId));
+
 });

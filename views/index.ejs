@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keyword" content="ecommerce, toys, fiction, online">
+        <link rel="icon" type="image/svg+xml" id="dark-mode" href="app-logo.svg">
+        <link rel="icon" type="image/png" href="app-logo.png">
+        <title>Statio - Home</title>
+        <link rel="stylesheet" media="all" href="stylesheets/index.css">
+        <link rel="stylesheet" media="all" href="stylesheets/mobi-styles.css">
+        <link rel="js" media="all" href="js/script.js">
+    </head>
+
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="main-heading" onclick="window.location = '/'">
+                    <img src="app-logo.png" alt="">
+                    <p><b>tatio</b></p>
+                </div>                
+
+                <div id="categoryButton" class="categories" onclick="toggleCategories()" accesskey="c">
+                    <p>☰ Categories</p>
+                </div>
+                <span class="search-content">
+                    <input type="text" placeholder="Search">
+                    <img src="search-icon.png" alt="Search">
+                </span>                
+
+                <nav class="navigation-content">
+                    <div class="nav-cont wishlist">
+                        <img src="bookmark-icon.svg" alt="Wishlist">
+                        <p>Wishlist</p>
+                    </div>
+
+                    <div class="nav-cont cart">
+                        <img src="cart-icon.svg" alt="Cart">
+                        <p style="margin: 0 0 0 7px;">Cart</p>
+                    </div>
+
+                    <div id="accountContainer" class="nav-cont account" onclick="toggleAccount()" accesskey="a">
+                        <img src="user-icon.png" alt="Account" title="Account">
+                        <p id="username"></p>
+                    </div>
+                    <div id="registerContainer" class="register">
+                        <button id="register-btn login" class="register-btn" onclick="openPage('signin')">Login</button>
+                        <button id="register-btn signup" class="register-btn" onclick="openPage('register')">Register</button>
+                    </div>
+                </nav>
+            </div>
+            
+            <div id="categoryContainer" class="categories-cont">
+                <div class="category-item">
+                    <img class="toys toys-img" src="category-toys.jpg" alt="Toys">
+                    <p class="toys toys-text">Action Figures</p>
+                </div>
+                
+                <div class="category-item">
+                    <img class="costumes costumes-img" src="category-costumes.jpg" alt="Costumes">
+                    <p class="costumes costumes-text">Costumes</p>
+                </div>
+
+                <div class="category-item">
+                    <img class="posters posters-img" src="category-prints.jpg" alt="Prints">
+                    <p class="posters posters-text">Prints</p>
+                </div>
+
+                <div class="category-item">
+                    <img class="books books-img" src="category-books.jpg" alt="Books">
+                    <p class="books books-text">Books</p>
+                </div>
+
+                <div class="category-item">
+                    <img class="films films-img" src="category-jewelry.jpg" alt="Jewellery">
+                    <p class="films films-text">Jewellery</p>
+                </div>
+
+                <div class="category-item">
+                    <img class="antiques antiques-img" src="category-antiques.jpg" alt="Antiques">
+                    <p class="antiques antiques-text">Antiques</p>
+                </div>
+            </div>
+
+            <hr>
+        </header>
+
+        <main>
+
+            <div class="slider">
+                <div class="slider-cont">
+                    <button class="w3-button w3-display-left" onclick="changeSlide(-1)" accesskey=",">&#10094;</button>
+
+                    <img class="slider-img batman" src="batman-slider.jpg" alt="DC">
+                    <img class="slider-img batman" src="last-of-us-slider.jpg" alt="THE LAST OF US">
+                    <img class="slider-img batman" src="uncharted-slider.jpg" alt="Uncharted">
+                    <img class="slider-img batman" src="kids-toys-slider.jpg" alt="Kids' Toys">
+
+                    <button class="w3-button w3-display-right" onclick="changeSlide(+1)" accesskey=".">&#10095;</button>
+                </div>
+
+                <div class="progression">
+                    <span class="progress-dot" onclick="currentSlide(1)"></span>
+                    <span class="progress-dot" onclick="currentSlide(2)"></span>
+                    <span class="progress-dot" onclick="currentSlide(3)"></span>
+                    <span class="progress-dot" onclick="currentSlide(4)"></span>
+                </div>
+                
+            </div>
+
+        </main>
+        <script src="js/script.js"></script>
+    </body>
+</html>
