@@ -87,5 +87,3 @@ function openPage(page) {
   window.location.href = `${page}`;
 }
 
-const usernameElement = document.getElementById('username');
-usernameElement.textContent = '<%= username %>';

@@ -43,12 +43,19 @@
 
                     <div id="accountContainer" class="nav-cont account" onclick="toggleAccount()" accesskey="a">
                         <img src="user-icon.png" alt="Account" title="Account">
-                        <p id="username"></p>
                     </div>
-                    <div id="registerContainer" class="register">
-                        <button id="register-btn login" class="register-btn" onclick="openPage('signin')">Login</button>
-                        <button id="register-btn signup" class="register-btn" onclick="openPage('register')">Register</button>
-                    </div>
+                        <% if (user) { %>
+                            <!-- Show username and logout button if logged in -->
+                            <div style="text-align: center;">
+                                <p style="color: aliceblue;">Hello, <%= user.username %>!</p>
+                                <button class="userInfo" style="border-radius: 5px; scale: 1.1;border: none;background-color: white; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='greenyellow'"  onmouseout="this.style.background='white'" onclick="window.location='/logout'">Logout</button>
+                            </div>
+                        <% } else { %>
+                            <div id="registerContainer" class="register">
+                                <button id="register-btn login" class="register-btn" onclick="openPage('signin')">Login</button>
+                                <button id="register-btn signup" class="register-btn" onclick="openPage('signup')">Signup</button>
+                            </div>
+                        <% } %>
                 </nav>
             </div>
             
